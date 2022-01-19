@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <%- include ('../components/head') %>
+</head>
+<body>
+    <%- include ('../components/navbar') %>
+    <div class="container">
+    <p></p>
+    <h1>Edit Data cerita</h1>
+    <form method="post" action="/cerita/update" enctype="multipart/form-data">
+        <div class="group-input">
+            <label>ID cerita Database </label>
+            <input class="form-control me-2" type="text" name="_id" readonly value='<%= cerita._id %>'><br>
+        </div>
+        <div class="group-input">
+            <label>judul cerita</label>
+            <input class="form-control me-2" type="text" name="judul" required value='<%= cerita.judul %>'><br>
+        </div>
+        <div class="group-input">
+            <label>cerita </label>
+            <input class="form-control me-2" type="text" name="ceritaa" required value='<%= cerita.cerita %>'><br>
+        </div>
+        <div class="group-input">
+            <label>Gambar</label>
+             <input class="form-control" type="file" required name="image"><br>
+        </div>
+        <button class="btn btn-outline-dark" type="submit">Simpan</button>
+        <a href="/cerita" class="btn btn-outline-dark">Kembali</a>
+    </form>
+    </div>
+    <%- include ('../components/footer') %>
+</body>
+</html>

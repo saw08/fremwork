@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+  <%- include ('../components/head') %>
+
+</head>
+<body>
+    <%- include ('../components/navbar') %>
+    <p></p>
+    <div class="container">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col-auto d-none d-lg-block">
+          <img width="400" height="200" class="img-fluid"
+          src="data:image/<%=cerita.img.contentType%>;base64,<%=cerita.img.data.toString('base64')%>" 
+          alt="image-produk">
+        </div>
+        <div class="col p-5 d-flex flex-column position-static">
+          <h2 class="fw-light"><b><%= cerita.judul %></b></h2>
+          <h5 class="fw-light"><%= cerita.ceritaa %></h5>
+          <div>
+            <a href="/cerita/update/<%= cerita._id %>/<%= cerita.judul %>/<%= cerita.ceritaa %>" 
+              class="btn btn-outline-secondary my-2">Edit </a>
+            <a href="/cerita/hapus/<%= cerita._id %>" class="btn btn-outline-secondary my-2">Hapus </a>
+            <a href="/cerita" class="btn btn-outline-secondary my-2">Kembali</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include ('../components/footer') %>
+</body>
+</html>

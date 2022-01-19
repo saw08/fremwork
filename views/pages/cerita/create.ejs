@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <%- include ('../components/head') %>
+</head>
+<body>
+    <%- include ('../components/navbar') %>
+    <div class="container">
+    <h1>Tambah cerita</h1>
+    <form action="/cerita" method="post" enctype="multipart/form-data">
+        <div class="group-input">
+            <input class="form-control me-2" type="text" name="judul" placeholder="Nama cerita"><br>
+        </div>
+        <div class="group-input">
+            <input class="form-control me-2" type="text" name="ceritaa" placeholder="cerita"><br>
+        </div>
+        <div class="group-input">
+            <label>Gambar</label>
+             <input class="form-control me-2" name='image' type="file" required><br>
+        </div>
+        <button class="btn btn-outline-dark" type="submit">Tambah</button>
+        <a href="/cerita" class="btn btn-outline-dark">Kembali</a>
+    </form>
+</div>
+</body>
+</html>

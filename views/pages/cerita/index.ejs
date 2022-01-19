@@ -1,0 +1,26 @@
+<html lang="en">
+    <head>
+        <%- include ('../components/head') %>
+    </head>
+    <body>
+        <%- include ('../components/navbar') %>
+        <p></p>
+        <div class="container">
+            
+            <h1>Daftar cerita</h1>
+            <h4>Total cerita : <%= cerita.length %></h4>
+            <ul>
+                <% if (cerita.length > 0) { %>
+                <% cerita.forEach (function(cerita){ %>
+                    <li><a href="/cerita/<%= cerita._id %>">
+                        <%= cerita.judul %>
+                    </a></li>
+                <% }); %>
+                <% } else { %>
+                <p>Data cerita Kosong</p>
+                <% } %>
+            </ul>
+        </div>
+        <%- include ('../components/footer') %>
+    </body>
+</html>
